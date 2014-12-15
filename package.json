@@ -1,28 +1,24 @@
 {
-  "name": "handlebars-layouts",
+  "name": "handlebars-group-by",
   "version": "1.0.0",
-  "description": "Handlebars helpers which implement layout blocks similar to Jade, Jinja, Swig, and Twig.",
+  "description": "Handlebars helper which allows you to group lists by a property of each item.",
   "keywords": [
-    "blocks",
+    "group",
     "dust",
     "express",
     "handlebars",
     "hbs",
-    "jade",
-    "layout",
     "mote",
-    "mustache",
-    "swig",
-    "twig"
+    "mustache"
   ],
-  "homepage": "https://github.com/shannonmoeller/handlebars-layouts",
-  "bugs": "https://github.com/shannonmoeller/handlebars-layouts/issues",
+  "homepage": "https://github.com/shannonmoeller/handlebars-group-by",
+  "bugs": "https://github.com/shannonmoeller/handlebars-group-by/issues",
   "license": "MIT",
   "author": "Shannon Moeller <me@shannonmoeller.com> (http://shannonmoeller.com)",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shannonmoeller/handlebars-layouts.git"
+    "url": "https://github.com/shannonmoeller/handlebars-group-by.git"
   },
   "scripts": {
     "coveralls": "cat ./coverage/lcov.info | coveralls",
