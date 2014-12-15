@@ -1,11 +1,26 @@
 'use strict';
 
+function get(obj, prop) {
+	var parts = prop.split('.'),
+		last = parts.pop();
+
+	while ((prop = parts.shift())) {
+		obj = obj[prop];
+
+		if (obj == null) {
+			return;
+		}
+	}
+
+	return obj[last];
+}
+
 function noop() {
 	return '';
 }
 
 /**
- * Registers layout helpers on an instance of Handlebars.
+ * Registers a group helper on an instance of Handlebars.
  *
  * @type {Function}
  * @param {Object} handlebars Handlebars instance.
@@ -36,7 +51,7 @@ function groupBy(handlebars) {
 			}
 
 			function groupKey(item) {
-				var key = item[prop];
+				var key = get(item, prop);
 
 				if (keys.indexOf(key) === -1) {
 					keys.push(key);

@@ -1,12 +1,27 @@
-!function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{var f;"undefined"!=typeof window?f=window:"undefined"!=typeof global?f=global:"undefined"!=typeof self&&(f=self),f.handlebarsLayouts=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+!function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{var f;"undefined"!=typeof window?f=window:"undefined"!=typeof global?f=global:"undefined"!=typeof self&&(f=self),f.handlebarsGroupBy=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
+
+function get(obj, prop) {
+	var parts = prop.split('.'),
+		last = parts.pop();
+
+	while ((prop = parts.shift())) {
+		obj = obj[prop];
+
+		if (obj == null) {
+			return;
+		}
+	}
+
+	return obj[last];
+}
 
 function noop() {
 	return '';
 }
 
 /**
- * Registers layout helpers on an instance of Handlebars.
+ * Registers a group helper on an instance of Handlebars.
  *
  * @type {Function}
  * @param {Object} handlebars Handlebars instance.
@@ -37,7 +52,7 @@ function groupBy(handlebars) {
 			}
 
 			function groupKey(item) {
-				var key = item[prop];
+				var key = get(item, prop);
 
 				if (keys.indexOf(key) === -1) {
 					keys.push(key);

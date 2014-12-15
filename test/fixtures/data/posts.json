@@ -4,31 +4,41 @@
       "guid": "4acad4c5-d853-43ce-ad2e-bb9990062dd5",
       "title": "Foo",
       "body": "Laboris anim in fugiat nulla id. Nisi est pariatur tempor veniam elit pariatur quis consectetur veniam sint. Ullamco do et Lorem occaecat. Eiusmod in elit consectetur minim elit veniam esse eiusmod voluptate. Irure ea sit ad incididunt ullamco mollit. Reprehenderit excepteur occaecat sit fugiat eu ut exercitation. Ut culpa cupidatat culpa non.",
-      "year": 2014
+      "date": {
+        "year": 2014
+      }
     },
     {
       "guid": "cdce485a-7f85-4f8a-8193-b7feda65c423",
       "title": "Bar",
       "body": "Dolore commodo voluptate quis excepteur enim voluptate. Officia labore aute elit nisi deserunt laborum veniam. In commodo amet nulla laborum cupidatat exercitation ipsum amet occaecat.",
-      "year": 2014
+      "date": {
+        "year": 2014
+      }
     },
     {
       "guid": "5eb238ba-5db5-4739-8715-c6305b6a2d4b",
       "title": "Baz",
       "body": "Lorem sit consectetur duis id anim. Aute eu ullamco qui anim anim reprehenderit pariatur. Nostrud enim et velit minim. Non ex enim ea do.",
-      "year": 2014
+      "date": {
+        "year": 2014
+      }
     },
     {
       "guid": "5e0d844c-3745-45d7-9266-c6c21f16e8e6",
       "title": "Bat",
       "body": "Deserunt ea ullamco consequat commodo proident laborum excepteur qui non cillum esse quis aliqua aliquip. Dolor irure adipisicing laboris sit veniam velit ea veniam reprehenderit ex amet. Nulla velit aliqua exercitation nulla veniam fugiat deserunt excepteur tempor excepteur nisi quis magna nostrud.",
-      "year": 2015
+      "date": {
+        "year": 2015
+      }
     },
     {
       "guid": "95caa765-475d-4993-bd24-edd3dbb8ff1b",
       "title": "Qux",
       "body": "Eiusmod labore laboris culpa commodo mollit ex veniam Lorem reprehenderit. Voluptate occaecat ut exercitation ullamco et proident ullamco anim ipsum cupidatat. Sunt veniam cillum incididunt consequat elit dolor id tempor qui mollit commodo. Commodo aute ex do quis aliqua non nulla incididunt veniam commodo non tempor consectetur.",
-      "year": 2015
+      "date": {
+        "year": 2015
+      }
     }
   ]
 }

@@ -43,7 +43,7 @@ gulp.task('test', ['lint', 'cover'], function () {
 gulp.task('build', ['test'], function () {
 	var browserify = require('browserify'),
 		source = require('vinyl-source-stream'),
-		options = { standalone: 'handlebars-layouts' };
+		options = { standalone: 'handlebars-group-by' };
 
 	return browserify(paths.src, options)
 		.bundle()
