@@ -16,9 +16,9 @@ With [Bower](http://bower.io):
 
 ## Helper
 
-### `{{#group [list] by="[property]"}}`
+### `{{#group [list] by=[property]}}`
 
-- `name` `Array` - Array whose items should be grouped together.
+- `list` `Array` - Array whose items should be grouped together.
 - `by` `String` - The name of the property by whose value items should be grouped.
 
 Data:
