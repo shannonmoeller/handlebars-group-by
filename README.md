@@ -1,5 +1,7 @@
 # `handlebars-group-by`
 
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/shannonmoeller/handlebars-group-by?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 > Handlebars helper which allows you to group lists by a property of each item.
 
 [![NPM version][npm-img]][npm-url] [![Downloads][downloads-img]][npm-url] [![Build Status][travis-img]][travis-url] [![Coverage Status][coveralls-img]][coveralls-url]
