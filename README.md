@@ -130,7 +130,7 @@ MIT
 [coveralls-img]: http://img.shields.io/coveralls/shannonmoeller/handlebars-group-by/master.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/r/shannonmoeller/handlebars-group-by
 [downloads-img]: http://img.shields.io/npm/dm/handlebars-group-by.svg?style=flat-square
-[gitter-img]:    http://img.shields.io/badge/chat-shannonmoeller/handlebars--group-by-blue.svg?style=flat-square
+[gitter-img]:    http://img.shields.io/badge/chat-shannonmoeller/handlebars--group--by-blue.svg?style=flat-square
 [gitter-url]:    https://gitter.im/shannonmoeller/handlebars-group-by
 [gittip-img]:    http://img.shields.io/gittip/shannonmoeller.svg?style=flat-square
 [gittip-url]:    https://www.gittip.com/shannonmoeller
