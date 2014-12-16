@@ -1,8 +1,8 @@
 # `handlebars-group-by`
 
-> Handlebars helper which allows you to group lists by a property of each item.
-
 [![NPM version][npm-img]][npm-url] [![Downloads][downloads-img]][npm-url] [![Build Status][travis-img]][travis-url] [![Coverage Status][coveralls-img]][coveralls-url]
+
+Handlebars helper which allows you to group lists by a property of each item.
 
 ## Install
 
