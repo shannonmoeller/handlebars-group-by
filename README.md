@@ -26,11 +26,11 @@ Data:
 ```js
 {
     posts: [
-        { year: 2014, title: 'foo', body: 'foo bar' },
-        { year: 2014, title: 'bar', body: 'bar baz' },
-        { year: 2014, title: 'baz', body: 'baz bat' },
-        { year: 2015, title: 'bat', body: 'bat qux' },
-        { year: 2015, title: 'qux', body: 'qux foo' }
+        { date: { year: 2014 }, title: 'foo', body: 'foo bar' },
+        { date: { year: 2014 }, title: 'bar', body: 'bar baz' },
+        { date: { year: 2014 }, title: 'baz', body: 'baz bat' },
+        { date: { year: 2015 }, title: 'bat', body: 'bat qux' },
+        { date: { year: 2015 }, title: 'qux', body: 'qux foo' }
     ]
 }
 ```
@@ -38,7 +38,7 @@ Data:
 Template:
 
 ```html
-{{#group posts by="year"}}
+{{#group posts by="date.year"}}
 	<h1>{{ value }}</h1>
 
 	{{#each items}}
@@ -130,7 +130,7 @@ Licensed under [MIT](http://shannonmoeller.com/mit.txt)
 [coveralls-img]: http://img.shields.io/coveralls/shannonmoeller/handlebars-group-by/master.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/r/shannonmoeller/handlebars-group-by
 [downloads-img]: http://img.shields.io/npm/dm/handlebars-group-by.svg?style=flat-square
-[gitter-img]:    http://img.shields.io/badge/chat-shannonmoeller/handlebars--group-by-blue.svg?style=flat-square
+[gitter-img]:    http://img.shields.io/badge/chat-shannonmoeller/handlebars--group--by-blue.svg?style=flat-square
 [gitter-url]:    https://gitter.im/shannonmoeller/handlebars-group-by
 [gittip-img]:    http://img.shields.io/gittip/shannonmoeller.svg?style=flat-square
 [gittip-url]:    https://www.gittip.com/shannonmoeller
