@@ -1,6 +1,6 @@
 # `handlebars-group-by`
 
-[![NPM version][npm-img]][npm-url] [![Downloads][downloads-img]][npm-url] [![Build Status][travis-img]][travis-url] [![Coverage Status][coveralls-img]][coveralls-url]
+[![NPM version][npm-img]][npm-url] [![Downloads][downloads-img]][npm-url] [![Build Status][travis-img]][travis-url] [![Coverage Status][coveralls-img]][coveralls-url] [![Chat][gitter-img]][gitter-url]
 
 Handlebars helper which allows you to group lists by a property of each item.
 
@@ -113,7 +113,7 @@ grunt.initConfig({
 
 ## Contribute
 
-[![Tasks][waffle-img]][waffle-url] [![Chat][gitter-img]][gitter-url] [![Tip][gittip-img]][gittip-url]
+[![Tasks][waffle-img]][waffle-url] [![Tip][gittip-img]][gittip-url]
 
 Standards for this project, including tests, code coverage, and semantics are enforced with a build tool. Pull requests must include passing tests with 100% code coverage and no linting errors.
 
@@ -130,7 +130,7 @@ Licensed under [MIT](http://shannonmoeller.com/mit.txt)
 [coveralls-img]: http://img.shields.io/coveralls/shannonmoeller/handlebars-group-by/master.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/r/shannonmoeller/handlebars-group-by
 [downloads-img]: http://img.shields.io/npm/dm/handlebars-group-by.svg?style=flat-square
-[gitter-img]:    http://img.shields.io/badge/chat-shannonmoeller/handlebars--group--by-blue.svg?style=flat-square
+[gitter-img]:    http://img.shields.io/badge/gitter-join_chat-1dce73.svg?style=flat-square
 [gitter-url]:    https://gitter.im/shannonmoeller/handlebars-group-by
 [gittip-img]:    http://img.shields.io/gittip/shannonmoeller.svg?style=flat-square
 [gittip-url]:    https://www.gittip.com/shannonmoeller
