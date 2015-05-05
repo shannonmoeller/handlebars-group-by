@@ -27,9 +27,9 @@ Data:
 {
     posts: [
         { date: { year: 2014 }, title: 'foo', body: 'foo bar' },
+        { date: { year: 2015 }, title: 'bat', body: 'bat qux' },
         { date: { year: 2014 }, title: 'bar', body: 'bar baz' },
         { date: { year: 2014 }, title: 'baz', body: 'baz bat' },
-        { date: { year: 2015 }, title: 'bat', body: 'bat qux' },
         { date: { year: 2015 }, title: 'qux', body: 'qux foo' }
     ]
 }
