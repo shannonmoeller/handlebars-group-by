@@ -16,17 +16,16 @@ function get(obj, prop) {
 }
 
 function transformObjToArrayIfNeeded(obj) {
-	if (obj instanceof Array) {
-		return obj;
-	}
-	if (obj instanceof Object) {
+	if (obj instanceof Object && !(obj instanceof Array)) {
 		// Would like to have run Object.values instead of below
 		return Object.keys(obj).map(
 			function (k) {
 				return obj[k]
 			});
 	}
-	return obj;
+	else {
+		return obj;
+	}
 }
 
 function noop() {
