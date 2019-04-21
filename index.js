@@ -20,7 +20,11 @@ function transformObjToArrayIfNeeded(obj) {
 		return obj;
 	}
 	if (obj instanceof Object) {
-		return Object.values(obj)
+		// Would like to have run Object.values instead of below
+		return Object.keys(obj).map(
+			function (k) {
+				return obj[k]
+			});
 	}
 	return obj;
 }
