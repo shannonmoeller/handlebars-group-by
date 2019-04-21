@@ -15,6 +15,16 @@ function get(obj, prop) {
 	return obj[last];
 }
 
+function transformObjToArrayIfNeeded(obj) {
+	if (obj instanceof Array) {
+		return obj;
+	}
+	if (obj instanceof Object) {
+		return Object.values(obj)
+	}
+	return obj;
+}
+
 function noop() {
 	return '';
 }
@@ -38,6 +48,7 @@ function groupBy(handlebars) {
 		 */
 		group: function (list, options) {
 			options = options || {};
+			list = transformObjToArrayIfNeeded(list);
 
 			var fn = options.fn || noop,
 				inverse = options.inverse || noop,

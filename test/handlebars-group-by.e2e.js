@@ -10,17 +10,17 @@ var handlebarsGroupBy = require('../index'),
 describe('handlebars-group-by e2e', function () {
 	var count;
 
-	function toEqualExpected(file, cb) {
-		count++;
+	function toEqualExpected(datafile) {
+		return function (file, cb) {
+			count++;
+			var data = require('./fixtures/data/' + datafile),
+				expected = file.path.replace('fixtures', 'expected'),
+				template = handlebars.compile(file.contents.toString()),
+				retval = template(data);
 
-		var data = require('./fixtures/data/posts.json'),
-			expected = file.path.replace('fixtures', 'expected'),
-			template = handlebars.compile(file.contents.toString()),
-			retval = template(data);
-
-		expect(retval).to.be(fs.readFileSync(expected, 'utf8'));
-
-		cb(null, file);
+			expect(retval).to.be(fs.readFileSync(expected, 'utf8'));
+			cb(null, file);
+		};
 	}
 
 	before(function () {
@@ -31,9 +31,18 @@ describe('handlebars-group-by e2e', function () {
 		count = 0;
 	});
 
-	it('should render layouts properly', function (done) {
+	it('should render layouts properly when posts sits in an array', function (done) {
 		vs.src(__dirname + '/fixtures/*.hbs')
-			.pipe(map(toEqualExpected))
+			.pipe(map(toEqualExpected('posts.json')))
+			.on('error', done)
+			.on('end', function () {
+				expect(count).to.be(1);
+				done();
+			});
+	});
+	it('should render layouts properly when posts sits in an object', function (done) {
+		vs.src(__dirname + '/fixtures/*.hbs')
+			.pipe(map(toEqualExpected('posts.obj.json')))
 			.on('error', done)
 			.on('end', function () {
 				expect(count).to.be(1);
