@@ -1,6 +1,6 @@
 {
   "name": "handlebars-group-by",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Handlebars helper which allows you to group lists by a property of each item.",
   "keywords": [
     "group",

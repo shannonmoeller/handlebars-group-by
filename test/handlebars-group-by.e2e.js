@@ -32,7 +32,7 @@ describe('handlebars-group-by e2e', function () {
 	});
 
 	it('should render layouts properly when posts sits in an array', function (done) {
-		vs.src(__dirname + '/fixtures/*.hbs')
+		vs.src(__dirname + '/fixtures/group.hbs')
 			.pipe(map(toEqualExpected('posts.json')))
 			.on('error', done)
 			.on('end', function () {
@@ -41,7 +41,7 @@ describe('handlebars-group-by e2e', function () {
 			});
 	});
 	it('should render layouts properly when posts sits in an object', function (done) {
-		vs.src(__dirname + '/fixtures/*.hbs')
+		vs.src(__dirname + '/fixtures/group.obj.hbs')
 			.pipe(map(toEqualExpected('posts.obj.json')))
 			.on('error', done)
 			.on('end', function () {

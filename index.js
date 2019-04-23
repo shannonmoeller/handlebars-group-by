@@ -11,21 +11,7 @@ function get(obj, prop) {
 			return;
 		}
 	}
-
 	return obj[last];
-}
-
-function transformObjToArrayIfNeeded(obj) {
-	if (obj instanceof Object && !(obj instanceof Array)) {
-		// Would like to have run Object.values instead of below
-		return Object.keys(obj).map(
-			function (k) {
-				return obj[k]
-			});
-	}
-	else {
-		return obj;
-	}
 }
 
 function noop() {
@@ -51,20 +37,39 @@ function groupBy(handlebars) {
 		 */
 		group: function (list, options) {
 			options = options || {};
-			list = transformObjToArrayIfNeeded(list);
 
 			var fn = options.fn || noop,
 				inverse = options.inverse || noop,
 				hash = options.hash,
 				prop = hash && hash.by,
 				keys = [],
-				groups = {};
+				groups = {},
+				isArray = list instanceof Array,
+				isObject = list instanceof Object;
 
-			if (!prop || !list || !list.length) {
+			if (!prop || !list || !(isArray || isObject))
+			{
 				return inverse(this);
 			}
 
-			function groupKey(item) {
+			function groupKeyObj(itemkey) {
+				var item = list[itemkey],
+					groupKey = get(item, prop);
+
+				if (keys.indexOf(groupKey) === -1) {
+					keys.push(groupKey);
+				}
+
+				if (!groups[groupKey]) {
+					groups[groupKey] = {
+						value: groupKey,
+						items: {}
+					};
+				}
+				groups[groupKey].items[itemkey] = item;
+			}
+
+			function groupKeyArray(item) {
 				var key = get(item, prop);
 
 				if (keys.indexOf(key) === -1) {
@@ -77,7 +82,6 @@ function groupBy(handlebars) {
 						items: []
 					};
 				}
-
 				groups[key].items.push(item);
 			}
 
@@ -85,9 +89,15 @@ function groupBy(handlebars) {
 				return buffer + fn(groups[key]);
 			}
 
-			list.forEach(groupKey);
+			if (isArray) {
+				list.forEach(groupKeyArray);
+				return keys.reduce(renderGroup, '');
+			}
+			else {
+				Object.keys(list).forEach(groupKeyObj);
+				return keys.reduce(renderGroup, '');
+			}
 
-			return keys.reduce(renderGroup, '');
 		}
 	};
 

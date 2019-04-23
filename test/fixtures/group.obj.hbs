@@ -1,0 +1,10 @@
+{{#group posts by="date.year"}}
+	<h1>{{ value }}</h1>
+
+	{{#each items}}
+		<span>{{ @key }}</span>
+		<h2>{{ title }}</h2>
+		<p>{{ body }}</p>
+
+	{{/each}}
+{{/group}}
