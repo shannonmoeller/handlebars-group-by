@@ -1,0 +1,39 @@
+{
+  "posts": {
+    "4acad4c5-d853-43ce-ad2e-bb9990062dd5": {
+      "title": "Foo",
+      "body": "A",
+      "date": {
+        "year": 2014
+      }
+    },
+    "cdce485a-7f85-4f8a-8193-b7feda65c423": {
+      "title": "Bar",
+      "body": "B",
+      "date": {
+        "year": 2014
+      }
+    },
+    "5eb238ba-5db5-4739-8715-c6305b6a2d4b": {
+      "title": "Baz",
+      "body": "C",
+      "date": {
+        "year": 2014
+      }
+    },
+    "5e0d844c-3745-45d7-9266-c6c21f16e8e6": {
+      "title": "Bat",
+      "body": "D",
+      "date": {
+        "year": 2015
+      }
+    },
+    "95caa765-475d-4993-bd24-edd3dbb8ff1b": {
+      "title": "Qux",
+      "body": "E",
+      "date": {
+        "year": 2015
+      }
+    }
+  }
+}
