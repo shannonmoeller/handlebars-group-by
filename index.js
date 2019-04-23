@@ -91,13 +91,11 @@ function groupBy(handlebars) {
 
 			if (isArray) {
 				list.forEach(groupKeyArray);
-				return keys.reduce(renderGroup, '');
 			}
 			else {
 				Object.keys(list).forEach(groupKeyObj);
-				return keys.reduce(renderGroup, '');
 			}
-
+			return keys.reduce(renderGroup, '');
 		}
 	};
 
